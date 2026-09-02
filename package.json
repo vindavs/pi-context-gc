@@ -1,0 +1,38 @@
+{
+  "name": "pi-context-gc",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Pi extension that replaces consumed large tool results with recoverable context markers",
+  "type": "module",
+  "author": "Miķelis Vindavs",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vindavs/pi-context-gc.git"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "context-management"
+  ],
+  "files": [
+    "extensions",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "bun test tests/context-gc.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/context-gc/index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=0.84.2 <1"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.84.4",
+    "@types/bun": "^1.3.10",
+    "typescript": "^6.0.2"
+  }
+}
